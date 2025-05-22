@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #c6d6fc;
+}
+header {
+  background-color: white;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #1c1c1c;
+  cursor: pointer;
+}
+.logo img {
+  height: 40px;
+}
+.search-bar {
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 0 20px;
+  display: flex;
+}
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+}
+.search-bar button {
+  background-color: #d90479;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header-icons button {
+  background-color: #d90479;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.user-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.sidebar {
+  background-color: white;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  padding: 30px 20px;
+}
+.sidebar .logo {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.sidebar a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 500;
+  border-radius: 8px;
+}
+.sidebar a.active {
+  background-color: #5b7cff;
+  color: white;
+}
+
+.main {
+  margin-left: 220px;
+  padding: 30px;
+}
+
+.charts-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 300px;
+  height: 300px;
+}
+
+.orders-list {
+background-color: white;
+padding: 20px;
+border-radius: 15px;
+margin-top: 30px;
+border: 2px solid #d90479;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+th {
+  background-color: #e6007e;
+  color: white;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.table > tbody > tr {
+border-bottom: 1px solid pink;
+}
+
+.table > thead > tr {
+border-bottom: 2px solid pink;
+}
+
+.table > tbody > tr:last-child {
+border-bottom: none; /* Optional: remove last line if desired */
+}
+
+
+thead th {
+background-color: #d90479 !important;
+color: white !important;
+text-align: center;
+padding: 10px;
+border: none;
+}
+
+.status-processing {
+color: #007bff; /* Bootstrap blue */
+font-weight: 600;
+}
+
+.status-pending {
+color: #ffc107; /* Bootstrap yellow */
+font-weight: 600;
+}
+
+.status-delivered {
+color: #28a745; /* Bootstrap green */
+font-weight: 600;
+}
+
+.status-cancelled {
+color: #dc3545; /* Bootstrap red */
+font-weight: 600;
+}
+
+
+.btn-view {
+  background-color: #5b7cff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.download-icon {
+  font-size: 1.2em;
+  color: #e6007e;
+  cursor: pointer;
+}

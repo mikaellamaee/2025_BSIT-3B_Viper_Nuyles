@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4f6edb;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #1c1c1c;
+}
+.logo img {
+  height: 40px;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header-icons button {
+  background-color: #d90479;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.search-bar input[type="text"] {
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #d90479;
+  border: none;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.banner {
+  background-color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0 100px;
+  border-radius: 40px;
+  position: relative;
+}
+.banner::before, .banner::after {
+  content: '<';
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.banner::before { left: -50px; content: '\2190'; }
+.banner::after { right: -50px; content: '\2192'; }
+
+.categories {
+  background-color: white;
+  padding: 10px;
+  margin: 20px 60px;
+  border-radius: 20px;
+}
+.categories h3 {
+  margin-bottom: 10px;
+}
+.category-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+}
+.category-row div {
+  text-align: center;
+  width: 80px;
+}
+.category-row img {
+  width: 60px;
+  height: 60px;
+}
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+.product-box {
+  width: 150px;
+  height: 180px;
+  background-color: #3e56b4;
+  border-radius: 20px;
+}

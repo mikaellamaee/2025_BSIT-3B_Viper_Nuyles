@@ -1,0 +1,203 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+body { 
+  background-color: #4a6ed1; 
+  color: #333; 
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  font-weight: 700; 
+  font-size: 1.25rem; 
+  color: #1c1c1c; 
+}
+
+.logo img { 
+  height: 40px; 
+}
+
+.help-link {
+  color: #476cdf;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.help-link:hover { 
+  text-decoration: underline; 
+}
+
+.container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.left-panel {
+  flex: 1;
+  background-color: #4a6ed1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.birds-wrapper {
+  position: relative;
+  width: 240px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.bird {
+  position: absolute;
+  fill: white;
+  opacity: 0.9;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.15));
+}
+
+.bird1 { top: 10px; left: 30px; animation: float 4s ease-in-out infinite, flap 1.5s ease-in-out infinite; }
+.bird2 { top: 100px; left: 10px; animation: float 5s ease-in-out infinite, driftLeft 6s ease-in-out infinite; }
+.bird3 { top: -10px; left: 100px; animation: float 6s ease-in-out infinite, flap 2s ease-in-out infinite; }
+
+.left-panel h2 { font-size: 28px; font-weight: 700; margin-top: 100px; }
+
+.right-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.right-panel {
+  background-color: white;
+  padding: 100px 30px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.right-panel h1 { 
+  font-size: 36px; 
+  font-weight: bold; 
+  margin-bottom: 30px; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: none;
+  background-color: #cdd9fd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  user-select: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #c80064;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover { background-color: #b40060; }
+
+.options, .bottom-text {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.bottom-text a {
+  color: #d4006f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.error-msg {
+  color: red;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .container { flex-direction: column; }
+
+  .right-wrapper { justify-content: center; padding: 0 20px; }
+
+  .right-panel {
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+
+  .left-panel { padding: 30px; }
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes flap {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(0.9); }
+}
+
+@keyframes driftLeft {
+  0%   { transform: translateX(0) translateY(0); }
+  50%  { transform: translateX(-10px) translateY(-5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
